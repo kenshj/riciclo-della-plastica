@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Riciclo della plastica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a href="#home" class="logo">♻ Riciclo plastica</a>
+  <nav>
+    <a href="#cose">Cos’è</a>
+    <a href="#perche">Perché</a>
+    <a href="#come">Come avviene</a>
+    <a href="#vantaggi">Vantaggi</a>
+    <a href="#impianti">Impianti</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#fonti">Fonti</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <h1>La plastica non è un rifiuto.<br>È una risorsa che può tornare in vita.</h1>
+    <p>Scopri cos’è il riciclo, come funziona e cosa puoi fare tu, a partire dal prossimo imballaggio che getti.</p>
+    <a class="btn" href="#come">Vedi come funziona</a>
+    <a class="btn btn-ghost" href="#quiz">Metti alla prova</a>
+  </div>
+  <div class="bottle-box" aria-hidden="true">
+    <div class="bottle" id="bottle"><span class="cap"></span><span class="liquid"></span></div>
+    <p class="hint">Clicca la bottiglia!</p>
+    <p id="bottle-msg" class="bottle-msg">Una bottiglia di PET può diventare una felpa in pile.</p>
+  </div>
+</section>
+
+<main>
+
+<section id="cose">
+  <h2>Cos’è il riciclo della plastica</h2>
+  <p>Il riciclo della plastica è il processo che trasforma imballaggi e oggetti in plastica usati in <strong>materia prima seconda</strong>: granuli o scaglie con cui si fabbricano nuovi prodotti. Così la plastica non finisce in discarica o dispersa nell’ambiente.</p>
+  <p>Non tutte le plastiche sono uguali. Il simbolo triangolare con un numero indica il polimero: clicca per scoprire a cosa servono e cosa diventano.</p>
+  <div class="codes" id="codes"></div>
+  <div class="code-detail" id="code-detail">Seleziona un codice qui sopra.</div>
+</section>
+
+<section id="perche" class="alt">
+  <h2>Perché si ricicla</h2>
+  <div class="grid">
+    <article class="card"><h3>Per l’ambiente</h3><p>La plastica impiega centinaia di anni a degradarsi e, se dispersa, danneggia mari, suoli e animali.</p></article>
+    <article class="card"><h3>Per le risorse</h3><p>La maggior parte delle plastiche deriva dal petrolio: riciclare riduce il bisogno di nuova materia prima fossile.</p></article>
+    <article class="card"><h3>Per il clima</h3><p>Produrre plastica riciclata richiede in genere meno energia e genera meno emissioni di CO₂ di quella vergine.</p></article>
+    <article class="card"><h3>Per la legge</h3><p>L’Unione Europea fissa obiettivi di riciclo degli imballaggi in plastica che gli Stati devono raggiungere.</p></article>
+  </div>
+</section>
+
+<section id="come">
+  <h2>Come avviene il riciclo</h2>
+  <p>Clicca sulle tappe per vedere cosa succede in ogni fase.</p>
+  <div class="steps" id="steps"></div>
+  <div class="step-detail" id="step-detail"></div>
+</section>
+
+<section id="vantaggi" class="alt">
+  <h2>I vantaggi del riciclo</h2>
+  <ul class="adv">
+    <li>Meno rifiuti in discarica e negli inceneritori</li>
+    <li>Risparmio di petrolio e di energia</li>
+    <li>Meno emissioni di gas serra</li>
+    <li>Nuovi posti di lavoro nella filiera del riciclo</li>
+    <li>Mari e territori più puliti</li>
+    <li>Economia circolare: i materiali restano in uso più a lungo</li>
+  </ul>
+  <div class="calc">
+    <h3>Calcola il tuo contributo</h3>
+    <label for="bottles">Quante bottiglie di plastica ricicli a settimana? <output id="bottles-out">10</output></label>
+    <input type="range" id="bottles" min="1" max="50" value="10">
+    <div class="results">
+      <div><strong id="r-kg">0</strong><span>kg di plastica all’anno</span></div>
+      <div><strong id="r-co2">0</strong><span>kg di CO₂ evitati (stima)</span></div>
+    </div>
+    <small>Stima indicativa: bottiglia da circa 20 g e circa 1,5 kg di CO₂ evitati per kg di plastica riciclata. I valori reali variano in base a polimero e processo.</small>
+  </div>
+</section>
+
+<section id="impianti">
+  <h2>Gli impianti di riciclo</h2>
+  <p>Il percorso della plastica attraversa impianti diversi. Scegli un tipo per leggerne il ruolo.</p>
+  <div class="tabs" id="tabs"></div>
+  <div class="tab-panel" id="tab-panel"></div>
+</section>
+
+<section id="quiz" class="alt">
+  <h2>Quiz: dove si butta?</h2>
+  <div class="quiz" id="quiz-box"></div>
+</section>
+
+<section id="fonti">
+  <h2>Fonti e approfondimenti</h2>
+  <p>Le informazioni di questo sito sono di carattere divulgativo e si basano su fonti ufficiali. Per dati aggiornati consulta direttamente questi siti.</p>
+  <div class="sources">
+    <a class="btn" href="https://www.corepla.it" target="_blank" rel="noopener">COREPLA – Consorzio per il riciclo degli imballaggi in plastica</a>
+    <a class="btn" href="https://www.isprambiente.gov.it" target="_blank" rel="noopener">ISPRA – Rapporti su rifiuti e raccolta differenziata</a>
+    <a class="btn" href="https://environment.ec.europa.eu" target="_blank" rel="noopener">Commissione Europea – Ambiente e rifiuti</a>
+    <a class="btn" href="https://plasticseurope.org" target="_blank" rel="noopener">Plastics Europe – Dati sull’industria della plastica</a>
+    <a class="btn" href="https://www.unep.org" target="_blank" rel="noopener">UNEP – Programma ONU per l’ambiente</a>
+    <a class="btn" href="https://www.ellenmacarthurfoundation.org" target="_blank" rel="noopener">Ellen MacArthur Foundation – Economia circolare</a>
+    <a class="btn" href="https://www.wikipedia.org" target="_blank" rel="noopener">Wikipedia – Riciclaggio delle materie plastiche</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>Sito didattico sul riciclo della plastica. <a href="#home">Torna su ↑</a></p>
+</footer>
+
+<script>
+const codes = [
+  {n:1, s:"PET", t:"Polietilene tereftalato", u:"Bottiglie per acqua e bibite, vaschette.", r:"Nuove bottiglie, fibre per pile e imbottiture."},
+  {n:2, s:"HDPE", t:"Polietilene ad alta densità", u:"Flaconi di detersivo, tappi, taniche.", r:"Tubi, cassette, panchine."},
+  {n:3, s:"PVC", t:"Polivinilcloruro", u:"Tubature, serramenti, alcune pellicole.", r:"Tubi, profili edili."},
+  {n:4, s:"LDPE", t:"Polietilene a bassa densità", u:"Sacchetti, pellicole, film.", r:"Sacchi per rifiuti, film agricoli."},
+  {n:5, s:"PP", t:"Polipropilene", u:"Vasetti, contenitori alimentari, tappi.", r:"Componenti auto, oggetti per la casa."},
+  {n:6, s:"PS", t:"Polistirene", u:"Vaschette, posate, polistirolo.", r:"Appendiabiti, isolanti."},
+  {n:7, s:"Altro", t:"Altre plastiche e miste", u:"Materiali compositi e multistrato.", r:"Più difficili da riciclare: spesso usate per plastiche miste."}
+];
+const cBox = document.getElementById('codes'), cDet = document.getElementById('code-detail');
+codes.forEach(c => {
+  const b = document.createElement('button');
+  b.className = 'code'; b.textContent = c.n; b.setAttribute('aria-label', c.s);
+  b.onclick = () => {
+    document.querySelectorAll('.code').forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    cDet.innerHTML = `<h3>${c.s} – ${c.t}</h3><p><b>Dove lo trovi:</b> ${c.u}</p><p><b>Diventa:</b> ${c.r}</p>`;
+  };
+  cBox.appendChild(b);
+});
+
+const steps = [
+  {t:"Raccolta", d:"Cittadini e aziende separano la plastica dagli altri rifiuti. In Italia di solito va nel contenitore giallo o nel sacco dedicato."},
+  {t:"Selezione", d:"Nei centri di selezione, nastri trasportatori, sensori ottici e operatori dividono la plastica per polimero e colore."},
+  {t:"Triturazione", d:"La plastica selezionata viene ridotta in piccoli pezzi, chiamati scaglie o fiocchi."},
+  {t:"Lavaggio", d:"Le scaglie vengono lavate per eliminare etichette, colle, residui di cibo e impurità."},
+  {t:"Fusione ed estrusione", d:"Le scaglie sono fuse e trasformate in granuli, pronti per essere usati dall’industria."},
+  {t:"Nuovi prodotti", d:"I granuli diventano nuovi oggetti: bottiglie, tessuti, tubi, arredo urbano e molto altro."}
+];
+const sBox = document.getElementById('steps'), sDet = document.getElementById('step-detail');
+steps.forEach((s, i) => {
+  const b = document.createElement('button');
+  b.className = 'step'; b.innerHTML = `<span>${i+1}</span>${s.t}`;
+  b.onclick = () => {
+    document.querySelectorAll('.step').forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    sDet.innerHTML = `<h3>${s.t}</h3><p>${s.d}</p>`;
+  };
+  sBox.appendChild(b);
+});
+sBox.firstChild.click();
+
+const plants = [
+  {t:"Centri di selezione", d:"Ricevono la raccolta differenziata e la separano per polimero e colore. In Italia sono collegati al sistema del consorzio COREPLA."},
+  {t:"Impianti di riciclo", d:"Trasformano la plastica selezionata in scaglie e granuli tramite triturazione, lavaggio ed estrusione."},
+  {t:"Riciclo chimico", d:"Tecnologia ancora in sviluppo: scompone i polimeri nei loro componenti di base, utile per plastiche difficili da riciclare."},
+  {t:"Impianti di recupero energetico", d:"Ricevono gli scarti non riciclabili e ne ricavano energia, evitando la discarica."}
+];
+const tBox = document.getElementById('tabs'), tPan = document.getElementById('tab-panel');
+plants.forEach(p => {
+  const b = document.createElement('button');
+  b.className = 'tab'; b.textContent = p.t;
+  b.onclick = () => {
+    document.querySelectorAll('.tab').forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    tPan.innerHTML = `<h3>${p.t}</h3><p>${p.d}</p>`;
+  };
+  tBox.appendChild(b);
+});
+tBox.firstChild.click();
+
+const range = document.getElementById('bottles');
+function calc() {
+  const kg = range.value * 52 * 0.02;
+  document.getElementById('bottles-out').textContent = range.value;
+  document.getElementById('r-kg').textContent = kg.toFixed(1).replace('.', ',');
+  document.getElementById('r-co2').textContent = (kg * 1.5).toFixed(1).replace('.', ',');
+}
+range.oninput = calc; calc();
+
+const facts = [
+  "Una bottiglia di PET può diventare una felpa in pile.",
+  "Separare bene la plastica rende il riciclo più efficace.",
+  "I tappi, se sono in plastica, si riciclano insieme alla bottiglia.",
+  "Il riciclo riduce il bisogno di nuovo petrolio."
+];
+let fi = 0;
+document.getElementById('bottle').onclick = e => {
+  e.currentTarget.classList.toggle('squash');
+  fi = (fi + 1) % facts.length;
+  document.getElementById('bottle-msg').textContent = facts[fi];
+};
+
+const questions = [
+  {q:"Dove si butta una bottiglia d’acqua vuota?", o:["Plastica","Vetro","Indifferenziato"], a:0},
+  {q:"Una vaschetta di polistirolo per alimenti, pulita, dove va (di solito)?", o:["Plastica","Carta","Vetro"], a:0},
+  {q:"Prima di buttare un flacone di detersivo cosa conviene fare?", o:["Svuotarlo bene","Lasciarlo pieno","Bruciarlo"], a:0},
+  {q:"Il riciclo contribuisce a ridurre…", o:["Il consumo di nuove risorse","Il numero di alberi","La luce del sole"], a:0}
+];
+let qi = 0, score = 0;
+const qBox = document.getElementById('quiz-box');
+function showQ() {
+  if (qi >= questions.length) {
+    qBox.innerHTML = `<h3>Hai totalizzato ${score} su ${questions.length}</h3><button class="btn" onclick="qi=0;score=0;showQ()">Riprova</button>`;
+    return;
+  }
+  const q = questions[qi];
+  qBox.innerHTML = `<h3>${q.q}</h3>` + q.o.map((x, i) => `<button class="opt" data-i="${i}">${x}</button>`).join('') + `<p id="fb"></p>`;
+  qBox.querySelectorAll('.opt').forEach(b => b.onclick = () => {
+    const ok = +b.dataset.i === q.a;
+    if (ok) score++;
+    b.classList.add(ok ? 'right' : 'wrong');
+    qBox.querySelectorAll('.opt').forEach(x => x.disabled = true);
+    document.getElementById('fb').innerHTML = (ok ? 'Corretto! ' : 'Non proprio. ') + `<button class="btn" onclick="qi++;showQ()">Avanti</button>`;
+  });
+}
+showQ();
+</script>
+</body>
+</html>
